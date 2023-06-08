@@ -21,3 +21,17 @@ scrollToPosition(projects, 3);
 scrollToPosition(contact, 4);
 
 
+
+// Function to apply rotation animation to an image
+function rotateImage(image) {
+  let rotation = 0;
+  image.style.transform = `rotate(${rotation}deg)`;
+
+  const rotateInterval = setInterval(() => {
+      rotation += 10;
+      image.style.transform = `rotate(${rotation}deg)`;
+  }, 60);
+}
+// Apply rotation animation to the portfolio icon
+const topImage = document.querySelector('.portfolio-icon');
+rotateImage(topImage);
