@@ -70,8 +70,3 @@ axios.get('http://localhost:3000/quote')
   .catch(function (error) {
     console.log(error);
   });
-
-
-
-
-
