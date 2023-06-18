@@ -14,6 +14,7 @@
     background-color: #454545;
 }
 
+
 /* General colors */
 .grey-icon-color {
     color: #808080;
@@ -66,7 +67,26 @@
 
 .navbar-right-list {
     font-size: 1.4rem;
+}
 
+.nav-bulb-gif {
+    height: 3.5rem;
+}
+
+.nav-bulb-gif:hover {
+    height: 3.7rem;
+}
+
+.quote-modal-content {
+    background-image: url("./images/scene-1.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.quotes-modal-text {
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.2rem
 }
 
 
@@ -191,6 +211,7 @@
     font-family: "Inter", sans-serif;
     font-size: 3.2rem;
 }
+
 .skills-top-text {
     font-family: "Inter", sans-serif;
     font-size: 1.2rem;
@@ -198,19 +219,22 @@
 
 
 .skills-card-body {
-   padding-top: 0.6rem;
-   padding-bottom: 0.6rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
 }
+
 .skills-card-img {
-    height:15rem;
+    height: 15rem;
     object-fit: cover;
-} 
+}
+
 .skills-card-topic {
     font-size: 1.3rem;
     color: white;
     display: flex;
     align-items: center;
 }
+
 .skills-card-i {
     font-size: 1.333rem;
 }
@@ -225,15 +249,17 @@
     height: 80%;
     object-fit: cover;
 }
+
 .backend-skills-img {
     width: 56%;
     height: 64%;
     object-fit: cover;
 }
+
 .others-skills-img {
     width: 60%;
     height: 56%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 
@@ -343,9 +369,11 @@
 .contact-top-div {
     height: 30%;
 }
+
 .contact-mid-div {
     height: 55%;
 }
+
 .contact-bottom-div {
     height: 15%;
     border-top: 0.1rem solid #808080;
@@ -361,17 +389,19 @@
     padding: 0.4rem 0.9rem;
     border-radius: 0.1rem;
 }
+
 .contact-form-btn:hover {
     transform: scale(1.06);
     font-weight: 400;
 }
 
 #contact-textarea-1 {
-    width: 36rem; 
+    width: 36rem;
     height: 2rem;
 }
+
 #contact-textarea-2 {
-    width: 36rem; 
+    width: 36rem;
     height: 15rem;
 }
 
@@ -511,6 +541,7 @@
     .projects-top-head {
         font-size: 2.4rem;
     }
+
     .projects-top-text {
         font-size: 0.9rem;
     }
@@ -518,6 +549,7 @@
     .project-card .project-overlay .project-card-top-text {
         font-size: 1.2rem;
     }
+
     .project-card .project-overlay .project-card-bottom-text {
         font-size: 0.7rem;
     }
@@ -551,6 +583,7 @@
     .projects-top-head {
         font-size: 2.1rem;
     }
+
     .projects-top-text {
         font-size: 0.76rem;
     }
@@ -562,9 +595,11 @@
     .project-card .project-overlay .project-card-top-text {
         font-size: 1rem;
     }
+
     .project-card .project-overlay .project-card-bottom-text {
         font-size: 0.57rem;
     }
+
     .project-card-redirect-icon {
         font-size: 1.14em;
     }
@@ -572,7 +607,7 @@
     .project-bottom-text {
         font-size: 0.9rem;
     }
-    
+
     .projects-github-icon {
         width: 1.8rem;
     }
@@ -589,6 +624,7 @@
     .skills-top {
         height: 32%;
     }
+
     .skills-bottom {
         height: 68%;
     }
@@ -596,11 +632,12 @@
     .skills-card-img {
         height: 10rem;
     }
-    
+
 
     .skills-top-head {
         font-size: 2.4rem;
     }
+
     .skills-top-text {
         font-size: 0.9rem;
     }
@@ -619,6 +656,7 @@
     .skills-card-topic {
         font-size: 0.9rem;
     }
+
     .skills-card-btn {
         font-size: 0.8rem;
     }
@@ -626,13 +664,14 @@
     .skills-top-head {
         font-size: 2.1rem;
     }
+
     .skills-top-text {
         font-size: 0.72rem;
     }
 
     .skills-card-i {
-        font-size: 0.8rem;  
-      }
+        font-size: 0.8rem;
+    }
 
     /* Modals */
     .my-modal-dialogue {
@@ -647,10 +686,12 @@
 }
 
 @media (max-width: 470px) {
+
     /* Modals */
     .my-modal-dialogue {
         width: 260px !important;
     }
+
     .modal-body-inside-div {
         padding-left: 1.2rem !important;
         padding-right: 1.22rem !important;
@@ -660,10 +701,12 @@
         width: 53%;
         height: 69%;
     }
+
     .backend-skills-img {
         width: 65%;
         height: 62%;
     }
+
     .others-skills-img {
         width: 70%;
         height: 54%;
@@ -687,28 +730,31 @@
 
 @media (max-width: 630px) {
     #contact-textarea-1 {
-        width: 28rem; 
+        width: 28rem;
         height: 1.9rem;
     }
+
     #contact-textarea-2 {
-        width: 28rem; 
+        width: 28rem;
         height: 11rem;
     }
 }
 
 @media (max-width: 520px) {
     #contact-textarea-1 {
-        width: 20rem; 
+        width: 20rem;
         height: 1.88rem;
     }
+
     #contact-textarea-2 {
-        width: 20rem; 
+        width: 20rem;
         height: 10rem;
     }
 
     .contact-head-contact {
         font-size: 2.8rem;
     }
+
     .contact-head-details {
         font-size: 0.8rem;
     }

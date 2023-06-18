@@ -22,6 +22,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto:wght@300;400;500&display=swap"
         rel="stylesheet">
 
+    <!-- Axios Script -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/ed5cd89387.js" crossorigin="anonymous"></script>
 </head>
@@ -31,13 +34,16 @@
     <!-- Navbar -->
     <nav id="navbar-desktop" class="navbar navbar-expand-lg my-navbar d-flex justify-content-center">
         <a class="navbar-brand-icon d-flex align-items-center" href="#">
-            <img class="me-2" src="./icons/favicon.png" alt="Icon" style="height: 2.4rem">PortFolio
+            <img class="me-2 portfolio-icon" src="./icons/favicon.png" alt="Icon" style="height: 2.4rem">PortFolio
         </a>
 
         <div class="navbar-div collapse navbar-collapse justify-content-end">
-            <ul class="navbar-nav mr-auto navbar-right-list">
+            <ul class="navbar-nav mr-auto navbar-right-list d-flex align-items-center">
                 <li class="nav-item active">
-                    <a id="home-anchor" class="right-item-nav" href="#">Home</a>
+                    <a id="home-anchor" class="right-item-nav" data-bs-toggle="modal"
+                        data-bs-target="#quotes-nav-modal">
+                        <img class="nav-bulb-gif" src="./icons/Bulb.gif" alt="Icon">
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a id="about-anchor" class="right-item-nav" href="#">About</a>
@@ -52,6 +58,27 @@
                     <a id="contact-anchor" class="right-item-nav" href="#">Contact</a>
                 </li>
             </ul>
+        </div>
+
+        <!-- Quotes Modal -->
+        <div class="modal fade" id="quotes-nav-modal" tabindex="-1" aria-labelledby="QuotesModalLabel"
+            aria-hidden="true">
+            <div class="quote-modal-dialogue modal-dialog modal-dialog-centered" >
+                <div class="quote-modal-content modal-content">
+                    <div class="modal-header d-flex justify-content-center">
+                        <h1 class="modal-title fs-5 text-white" id="QuotesModalLabel">
+                            <b>Quote of the Day</b>
+                        </h1>
+                    </div>
+                    <div class="modal-body my-2">
+                        <div class="row mx-0 text-center">
+                            <div id="quotes-modal-text" class="quotes-modal-text text-white">
+                                <!-- You will never know how strong you are until being strong is the only choice remained to you -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -69,14 +96,14 @@
             </div>
         </div>
         <div class="top-inside-div-2 col-md-5 col-12">
-            <img class="top-img" src="./images/profile.png" alt="Image description">
+            <img id="top-profile-img" class="top-img" src="./images/man.jpg" alt="Image description">
         </div>
     </div>
 
     <!-- About Section -->
     <div class="about-section row mx-0">
         <div class="about-inside-div-1 col-md-5 col-12">
-            <img class="about-img" src="./images/about_img.jpg" alt="Image description">
+            <img id="about-profile-img" class="about-img" alt="Image description">
         </div>
         <div class="about-inside-div-2 col-md-7 col-12 my-auto" style="padding-bottom: 12rem">
             <div class="about-first pt-5">
@@ -127,7 +154,8 @@
                     <div class="row mx-0 skills-card-body" style="background-color: #020617;">
                         <div class="col skills-card-topic">Frontend</div>
                         <div class="col text-end">
-                            <button type="button" class="btn btn-outline-warning skills-card-btn" data-bs-toggle="modal" data-bs-target="#frontend-modal">
+                            <button type="button" class="btn btn-outline-warning skills-card-btn" data-bs-toggle="modal"
+                                data-bs-target="#frontend-modal">
                                 <i class="fa-solid fa-arrow-right skills-card-i"></i>
                             </button>
                         </div>
@@ -140,7 +168,8 @@
                     <div class="row mx-0 skills-card-body" style="background-color: #020617;">
                         <div class="col skills-card-topic">Backend</div>
                         <div class="col text-end">
-                            <button type="button" class="btn btn-outline-warning skills-card-btn" data-bs-toggle="modal" data-bs-target="#backend-modal">
+                            <button type="button" class="btn btn-outline-warning skills-card-btn" data-bs-toggle="modal"
+                                data-bs-target="#backend-modal">
                                 <i class="fa-solid fa-arrow-right skills-card-i"></i>
                             </button>
                         </div>
@@ -153,7 +182,8 @@
                     <div class="row mx-0 skills-card-body" style="background-color: #020617;">
                         <div class="col skills-card-topic">Others</div>
                         <div class="col text-end">
-                            <button type="button" class="btn btn-outline-warning skills-card-btn" data-bs-toggle="modal" data-bs-target="#others-modal">
+                            <button type="button" class="btn btn-outline-warning skills-card-btn" data-bs-toggle="modal"
+                                data-bs-target="#others-modal">
                                 <i class="fa-solid fa-arrow-right skills-card-i"></i>
                             </button>
                         </div>
@@ -184,7 +214,8 @@
                                     <img class="frontend-skills-img" src="./icons/frontend/js.svg" alt="JS">
                                 </div>
                                 <div class="modal-body-inside-div col-6 col-sm-3" style="overflow: hidden;">
-                                    <img class="frontend-skills-img" src="./icons/frontend/bootstrap.svg" alt="BootStrap">
+                                    <img class="frontend-skills-img" src="./icons/frontend/bootstrap.svg"
+                                        alt="BootStrap">
                                 </div>
                                 <div class="modal-body-inside-div col-6 col-sm-3 pt-sm-3" style="overflow: hidden;">
                                     <img class="frontend-skills-img" src="./icons/frontend/react.svg" alt="React">
@@ -247,16 +278,16 @@
                                 <div class="modal-body-inside-div col-6 col-sm-3" style="overflow: hidden;">
                                     <img class="others-skills-img" src="./icons/others/google-cloud.svg" alt="GCP">
                                 </div>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- ---------------------------------------------------------Modals--------------------------------------------------------- -->
-
         </div>
+
+        <!-- ---------------------------------------------------------Modals--------------------------------------------------------- -->
+
+    </div>
     </div>
 
 
